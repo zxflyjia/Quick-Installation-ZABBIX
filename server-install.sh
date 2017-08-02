@@ -1,5 +1,4 @@
 #!/bin/sh
-echo "脚本作者:火星小刘 web:www.huoxingxiaoliu.com email:xtlyk@163.com"
 
 #sleep 10
 zabbix_version=3.0.9
@@ -143,6 +142,6 @@ echo "启动zabbix"
 /etc/init.d/zabbix_agentd restart
 /usr/local/zabbix/sbin/zabbix_java/startup.sh
 
-echo "数据库默认root密码zabbix123321;zabbix-Database name:zabbix/User:zabbix/Password:zabbix"
+echo "数据库默认root密码zabbix123321;zabbix-Database name:zabbix/User:admin/Password:zabbix"
 cp $zabbixdir/zabbix-${zabbix_version}.tar.gz /var/www/html/zabbix
 echo "打开http://$ip/zabbix，进行下一步安装"
